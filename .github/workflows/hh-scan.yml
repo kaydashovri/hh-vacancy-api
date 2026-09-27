@@ -1,0 +1,44 @@
+name: HH vacancy scan
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 13:45 UTC = 16:45 Moscow. ChatGPT evening job can read the result after 17:00 MSK.
+    - cron: "45 13 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Scan HH
+        env:
+          HH_ACCESS_TOKEN: ${{ secrets.HH_ACCESS_TOKEN }}
+          HH_USER_AGENT: ${{ secrets.HH_USER_AGENT }}
+        run: python scan.py
+
+      - name: Commit scan output
+        run: |
+          git config user.name "hh-bridge-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add output/
+          if git diff --cached --quiet; then
+            echo "No output changes"
+            exit 0
+          fi
+          git commit -m "Update HH vacancy scan"
+          git push

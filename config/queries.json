@@ -1,0 +1,84 @@
+{
+  "rolling_days": 14,
+  "per_page": 100,
+  "areas": [
+    "1"
+  ],
+  "queries": [
+    {
+      "text": "Program Manager",
+      "search_field": "name"
+    },
+    {
+      "text": "Technical Program Manager",
+      "search_field": "name"
+    },
+    {
+      "text": "Delivery Manager",
+      "search_field": "name"
+    },
+    {
+      "text": "Delivery Lead",
+      "search_field": "name"
+    },
+    {
+      "text": "Technical Project Manager",
+      "search_field": "name"
+    },
+    {
+      "text": "Senior Project Manager",
+      "search_field": "name"
+    },
+    {
+      "text": "Руководитель программ IT",
+      "search_field": "name"
+    },
+    {
+      "text": "Руководитель программы IT",
+      "search_field": "name"
+    },
+    {
+      "text": "Руководитель проекта IT",
+      "search_field": "name"
+    },
+    {
+      "text": "Руководитель IT-проектов",
+      "search_field": "name"
+    },
+    {
+      "text": "Технический руководитель проекта",
+      "search_field": "name"
+    },
+    {
+      "text": "Руководитель проектного офиса",
+      "search_field": "name"
+    },
+    {
+      "text": "Project Manager AI"
+    },
+    {
+      "text": "AI Project Manager"
+    },
+    {
+      "text": "AI Program Manager"
+    },
+    {
+      "text": "AI Delivery Manager"
+    },
+    {
+      "text": "GenAI Project Manager"
+    },
+    {
+      "text": "Руководитель проектов AI"
+    },
+    {
+      "text": "Менеджер проектов AI"
+    },
+    {
+      "text": "Project Manager FinTech"
+    },
+    {
+      "text": "Руководитель проектов FinTech"
+    }
+  ]
+}
