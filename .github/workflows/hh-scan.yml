@@ -2,10 +2,7 @@ name: HH vacancy scan
 
 on:
   workflow_dispatch:
-  schedule:
-    # 13:45 UTC = 16:45 Moscow. ChatGPT evening job can read the result after 17:00 MSK.
-    - cron: "45 13 * * *"
-
+  
 permissions:
   contents: write
 
